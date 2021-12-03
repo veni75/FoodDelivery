@@ -1,0 +1,14 @@
+
+    { "_id": 1, "orderId": 17, "amount": 639, "status": "új" },
+    { "_id": 2, "orderId": 5, "amount": 598, "status": "új" },
+    { "_id": 3, "orderId": 5, "amount": 859, "status": "új" },
+    { "_id": 4, "orderId": 17, "amount": 589, "status": "fizetve" },
+    { "_id": 5, "orderId": 4, "amount": 798, "status": "fizetve" },
+    { "_id": 6, "orderId": 8, "amount": 889, "status": "új" },
+    { "_id": 7, "orderId": 6, "amount": 911, "status": "új" },
+    { "_id": 8, "orderId": 1, "amount": 881, "status": "fizetve" },
+    { "_id": 9, "orderId": 14, "amount": 566, "status": "fizetve" },
+    { "_id": 10, "orderId": 5, "amount": 854, "status": "fizetve" }
+  
+
+ 

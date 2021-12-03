@@ -1,0 +1,14 @@
+.card {
+    border: 1px solid green;
+    box-shadow: 5px 5px 20px 10px rgb(106, 161, 127);
+    margin-bottom: 5rem;
+    width: 9vw;
+    transition: .5s;
+    height: 94%;
+
+}
+.card:hover {
+  border: 2px solid green;
+  box-shadow: 5px 5px 20px 10px rgb(89, 133, 106);
+
+}

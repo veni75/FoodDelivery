@@ -1,0 +1,596 @@
+[
+    {
+        "_id": 1,
+        "foodName": "Húsos rakott karfiol",
+        "ingredients": [
+            "karfiol",
+            "sertéslapocka",
+            "tej",
+            "rizs",
+            "búzaliszt",
+            "sárgarépa",
+            "vöröshagyma",
+            "sárgarépa",
+            "zeller",
+            "só",
+            "fokhagyma"
+        ],
+        "category": "normal",
+        "active": true,
+        "price": 1200,
+        "image": "images/1karfiol.jpg"
+    },
+    {
+        "_id": 2,
+        "foodName": "Gombás rizseshús",
+        "ingredients": [
+            "csirkemell",
+            "rizs",
+            "csiperkegomba",
+            "vöröshagyma",
+            "paprika",
+            "paradicsom",
+            "búzaliszt",
+            "só",
+            "sárgarépa",
+            "zeller",
+            "fokhagyma"
+        ],
+        "category": "normal",
+        "active": true,
+        "price": 1240,
+        "image": "images/2rizses.jpg"
+    },
+    {
+        "_id": 3,
+        "foodName": "Panírozott halrudak, burgonyapüré",
+        "ingredients": [
+            "burgonya",
+            "tej",
+            "tőkehal",
+            "búzaliszt",
+            "só"
+        ],
+        "category": "normal",
+        "active": true,
+        "price": 1285,
+        "image": "images/3halrudak.jpg"
+    },
+    {
+        "_id": 4,
+        "foodName": "Tojásos galuska",
+        "ingredients": [
+            "búzaliszt",
+            "tojás",
+            "tejföl",
+            "só"
+        ],
+        "category": "vegetarianus",
+        "active": true,
+        "price": 1065,
+        "image": "images/4galuska.jpg"
+    },
+    {
+        "_id": 5,
+        "foodName": "Paradicsomos káposzta, natúr csirkemell",
+        "ingredients": [
+            "fejeskáposzta",
+            "csirkemell",
+            "paradicsom",
+            "rizsliszt",
+            "vöröshagyma",
+            "fokhagyma",
+            "só"
+        ],
+        "category": "mentes",
+        "active": true,
+        "price": 1175,
+        "image": "images"
+    },
+    {
+        "_id": 6,
+        "foodName": "Zsivány pecsenye, grillezett zöldségek",
+        "ingredients": [
+            "zöldborsó",
+            "sárgarépa",
+            "sertéscomb",
+            "csemegekukorica",
+            "paprika",
+            "baconszalonna",
+            "sertéshús",
+            "só",
+            "sertés tarja",
+            "lilahagyma",
+            "vöröshagyma",
+            "fokhagyma",
+            "bors"
+        ],
+        "category": "mentes",
+        "active": true,
+        "price": 1430,
+        "image": "images/6pecsenye.jpg"
+    },
+    {
+        "_id": 7,
+        "foodName": "Húsos rakott zöldségek",
+        "ingredients": [
+            "zöldbab",
+            "cukkini",
+            "sárgarépa",
+            "karfiol",
+            "sertés lapocka",
+            "rizs",
+            "vöröshagyma",
+            "rizsliszt",
+            "só",
+            "fokhagyma"
+        ],
+        "category": "mentes",
+        "active": true,
+        "price": 1230,
+        "image": "images/7rakottzoldseg.jpg"
+    },
+    {
+        "_id": 8,
+        "foodName": "Rántott zöldségek, párolt rizs",
+        "ingredients": [
+            "padlizsán",
+            "brokkoli",
+            "karfiol",
+            "rizs",
+            "rizsliszt",
+            "kukoricaliszt",
+            "burgonyapehely",
+            "só",
+            "tojás"
+        ],
+        "category": "vegetarianus",
+        "active": true,
+        "price": 1380,
+        "image": "images/8rantottzoldseg.jpg"
+    },
+    {
+        "_id": 9,
+        "foodName": "Vöröslencse főzelék sült zöldségekkel",
+        "ingredients": [
+            "sárgarépa",
+            "joghurt",
+            "paprika",
+            "zeller",
+            "vöröslencse",
+            "bébikukorica",
+            "vöröshagyma",
+            "paradicsom",
+            "fokhagyma",
+            "kesudió",
+            "mangó",
+            "só",
+            "petrezselyemzöld",
+            "petrezselyemgyökér"
+        ],
+        "category": "vegetarianus",
+        "active": true,
+        "price": 1205,
+        "image": "images"
+    },
+    {
+        "_id": 10,
+        "foodName": "Csicseriborsófasírt, joghurtos padlizsánsaláta paradicsommal",
+        "ingredients": [
+            "padlizsán",
+            "joghurt",
+            "barnarizs",
+            "csicseriborsó",
+            "paradicsom",
+            "vöröshagyma",
+            "csicseriborsóliszt",
+            "kókusztej",
+            "só",
+            "fokhagyma",
+            "római kömény",
+            "petrezselyemzöld",
+            "nádcukor",
+            "koriander",
+            "fehérbors"
+        ],
+        "category": "vegetarianus",
+        "active": true,
+        "price": 1190,
+        "image": "images"
+    },
+    {
+        "_id": 11,
+        "foodName": "Rizses brokkoli",
+        "ingredients": [
+            "brokkoli",
+            "joghurt",
+            "basmati rizs",
+            "kaliforniai paprika",
+            "vöröshagyma",
+            "paradicsom",
+            "só",
+            "fokhagyma",
+            "csicseriborsóliszt",
+            "kesudió",
+            "mangó",
+            "petrezselyemzöld",
+            "chili paprika",
+            "koriander"
+        ],
+        "category": "vegetarianus",
+        "active": true,
+        "price": 1105,
+        "image": "images"
+    },
+    {
+        "_id": 12,
+        "foodName": "Székelykáposzta szejtánnal",
+        "ingredients": [
+            "savanyú káposzta",
+            "tejföl",
+            "vöröshagyma",
+            "paprika",
+            "paradicsom",
+            "búzaliszt",
+            "só",
+            "petrezselyemzöld",
+            "szójaszósz",
+            "kömény",
+            "fokhagyma",
+            "sárgarépa",
+            "petrezselyemgyökér",
+            "vöröshagyma",
+            "babérlevél",
+            "zeller",
+            "fehérbors",
+            "feketebors",
+            "kurkuma",
+            "gyömbér",
+            "mustármag"
+        ],
+        "category": "vegetarianus",
+        "active": true,
+        "price": 1190,
+        "image": "images"
+    },
+    {
+        "_id": 13,
+        "foodName": "Cukkinis paradicsomos köleskása",
+        "ingredients": [
+            "cukkini",
+            "köles",
+            "paradicsom",
+            "vöröshagyma",
+            "só",
+            "petrezselyemzöld",
+            "kukoricakeményítő",
+            "feketebors",
+            "sárgarépa",
+            "petrezselyemgyökér",
+            "zeller"
+        ],
+        "category": "vegan",
+        "active": true,
+        "price": 975,
+        "image": "images"
+    },
+    {
+        "_id": 14,
+        "foodName": "Sült zöldségek zöldborsópürében, barna rizzsel",
+        "ingredients": [
+            "cukkini",
+            "barna rizs",
+            "burgonya",
+            "zöldborsó",
+            "karfiol",
+            "kaliforniai paprika",
+            "paradicsom",
+            "só",
+            "sárgarépa",
+            "vöröshagyma",
+            "petrezselyemgyökér",
+            "zeller"
+        ],
+        "category": "vegan",
+        "active": true,
+        "price": 1030,
+        "image": "images/14sultzoldsegek.jpg"
+    },
+    {
+        "_id": 15,
+        "foodName": "Pirított burgonya karfiolpürével, zöldségekkel",
+        "ingredients": [
+            "burgonya",
+            "karfiol",
+            "sárgarépa",
+            "petrezselyemgyökér",
+            "zeller",
+            "petrezselyemzöld",
+            "só",
+            "vöröshagyma",
+            "fokhagyma"
+        ],
+        "category": "vegan",
+        "active": true,
+        "price": 1075,
+        "image": "images"
+    },
+    {
+        "_id": 16,
+        "foodName": "Zöldségpörkölt bulgurral",
+        "ingredients": [
+            "bulgur",
+            "cukkini",
+            "sárgarépa",
+            "karfiol",
+            "zöldborsó",
+            "vöröshagyma",
+            "paprika",
+            "paradicsom",
+            "só",
+            "petrezselyemzöld",
+            "petrezselyemgyökér",
+            "fokhagyma",
+            "fehérbors",
+            "zeller",
+            "feketebors",
+            "kömény",
+            "kurkuma",
+            "gyömbér",
+            "mustármag"
+        ],
+        "category": "vegan",
+        "active": true,
+        "price": 975,
+        "image": "images"
+    },
+    {
+        "_id": 17,
+        "foodName": "Gazpacho",
+        "ingredients": [
+            "paradicsom",
+            "paprika",
+            "uborka",
+            "vöröshagyma",
+            "fokhagyma",
+            "só"
+        ],
+        "category": "nyersvegan",
+        "active": true,
+        "price": 1380,
+        "image": "images/17gazpacho.jpg"
+    },
+    {
+        "_id": 18,
+        "foodName": "Rántott padlizsán, párolt rizs",
+        "ingredients": [
+            "padlizsán",
+            "rizs",
+            "rizsliszt",
+            "kukoricaliszt",
+            "burgonyapehely",
+            "só",
+            "tojás"
+        ],
+        "category": "mentes",
+        "active": true,
+        "price": 1380,
+        "image": "images"
+    },
+    {
+        "_id": 19,
+        "foodName": "Magyaros pizza",
+        "ingredients": [
+            "búzaliszt",
+            "élesztő",
+            "só",
+            "paradicsom",
+            "sajt",
+            "kolbász",
+            "bacon",
+            "szalámi",
+            "hagyma",
+            "paprika"
+        ],
+        "category": "normal",
+        "active": true,
+        "price": 3150,
+        "image": "images/19pizza.jpg"
+    },
+    {
+        "_id": 20,
+        "foodName": "Fitt pizza",
+        "ingredients": [
+            "búzaliszt",
+            "élesztő",
+            "só",
+            "paradicsom",
+            "sajt",
+            "gomba",
+            "cukkini",
+            "brokkoli",
+            "póréhagyma"
+        ],
+        "category": "vegetarianus",
+        "active": true,
+        "price": 2750,
+        "image": "images/20pizza.jpg"
+    },
+    {
+        "_id": 21,
+        "foodName": "Rántott sajt, burgonyapürével",
+        "ingredients": [
+            "búzaliszt",
+            "tojás",
+            "só",
+            "sajt",
+            "burgonya"
+        ],
+        "category": "vegetarianus",
+        "active": true,
+        "price": 2950,
+        "image": "images/21rantottsajt.jpg"
+    },
+    {
+        "_id": 22,
+        "foodName": "Zöldséges spagetti",
+        "ingredients": [
+            "búzaliszt",
+            "tojás",
+            "padlizsán",
+            "cukkini",
+            "paradicsom"
+        ],
+        "category": "vegetarianus",
+        "active": true,
+        "price": 2350,
+        "image": "images"
+    },
+    {
+        "_id": 23,
+        "foodName": "Lasagne",
+        "ingredients": [
+            "búzaliszt",
+            "tej",
+            "sajt",
+            "vaj",
+            " darált hús",
+            "paradicsom",
+            "vöröshagyma",
+            "só",
+            "bors"
+        ],
+        "category": "normal",
+        "active": true,
+        "price": 1380,
+        "image": "images/23lasagne.jpg"
+    },
+    {
+        "_id": 24,
+        "foodName": "Tavaszi saláta",
+        "ingredients": [
+            "paradicsom",
+            "retek",
+            "sárgarépa",
+            "saláta",
+            "lilakáposzta",
+            "uborka",
+            "lilahagyma",
+            "citromlé",
+            "lenolaj"
+        ],
+        "category": "nyersvegan",
+        "active": true,
+        "price": 1380,
+        "image": "images/24salata.jpg"
+    },
+    {
+        "_id": 25,
+        "foodName": "Margherita pizza",
+        "ingredients": [
+            "búzaliszt",
+            "só",
+            "élesztő",
+            "sajt",
+            "fokhagyma",
+            "paradicsom",
+            "só",
+            "bors",
+            "bazsalikom",
+            "oregáno"
+        ],
+        "category": "vegetarianus",
+        "active": true,
+        "price": 1380,
+        "image": "images/25pizza.jpg"
+    },
+    {
+        "_id": 26,
+        "foodName": "Zöld turmix",
+        "ingredients": [
+            "spenót",
+            "fodros kel",
+            "alma",
+            "banán",
+            "chia mag",            
+            "oregáno"
+        ],
+        "category": "nyersvegan",
+        "active": true,
+        "price": 780,
+        "image": "images/26zoldturmix.jpg"
+    },
+    {
+        "_id": 27,
+        "foodName": "Vegyes zöldségek nyárson",
+        "ingredients": [
+            "cukkini",            
+            "karfiol",
+            "kaliforniai paprika",
+            "paradicsom",            
+            "sárgarépa",
+            "vöröshagyma",
+            "petrezselyemgyökér",
+            "zeller"
+        ],
+        "category": "nyersvegan",
+        "active": true,
+        "price": 760,
+        "image": "images/27nyerszoldsegek.jpg"
+    },
+    {
+        "_id": 28,
+        "foodName": "Vegyes sült zöldségek tojással",
+        "ingredients": [
+            "cukkini",            
+            "brokkoli",
+            "kaliforniai paprika",
+            "paradicsom",            
+            "sárgarépa",
+            "vöröshagyma",
+            "spárga",
+            "tojás",
+            "só"
+        ],
+        "category": "alacsony szénhidráttartalmú",
+        "active": true,
+        "price": 960,
+        "image": "images/28zoldsegtojas.jpg"
+    },
+    {
+        "_id": 29,
+        "foodName": "Gombás zöldséges spagetti",
+        "ingredients": [
+            "cukkini",            
+            "brokkoli",
+            "spagetti",
+            "paradicsom",            
+            "sárgarépa",
+            "vöröshagyma",
+            "spárga",
+            "gomba",
+            "só"
+        ],
+        "category": "vegetarianus",
+        "active": true,
+        "price": 960,
+        "image": "images/29gombas.jpg"
+    },
+    {
+        "_id": 30,
+        "foodName": "Saksuka",
+        "ingredients": [            
+            "paprika",
+            "paradicsom",            
+            "fokhagyma",
+            "vöröshagyma",
+            "tojás",
+            "bors",
+            "só"
+        ],
+        "category": "vegetarianus",
+        "active": true,
+        "price": 1020,
+        "image": "images/30saksuka.jpg"
+    }
+]

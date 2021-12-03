@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <div *ngIf="(bill$ | async) as bill" class="col-6 offset-3">
+            <form #billForm="ngForm" (ngSubmit)="onUpdate(billForm, bill)">
+                <div class="form-group my-4">
+                    <label for="orderId">Rendelés azonosítója</label>
+                    <input id="orderId" name="orderId" [(ngModel)]="bill.orderId" type="number" class="form-control"
+                        pattern="[1-9]\d{0,9}" required>
+                    <div [hidden]="billForm.controls.orderId?.valid" class="error-message">
+                        Az azonosító minimum 1 és maximum 10 számjegyből állhat!
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="amount">Összeg</label>
+                    <input id="amount" name="amount" [(ngModel)]="bill.amount" type="number" class="form-control"
+                        pattern="[1-9]\d{0,9}" required>
+                    <div [hidden]="billForm.controls.amount?.valid" class="error-message">
+                        Az összeg minimum 1 és maximum 10 számjegyből állhat!
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="status">Status</label>
+                    <select id="status" name="status" [(ngModel)]="bill.status" class="form-control" required>
+                        <option *ngFor="let status of statuses" [value]="status">{{status}}</option>
+                    </select>
+                    <div [hidden]="billForm.controls.status?.valid" class="error-message">
+                        A status csak a megadott értékeket veheti fel
+                    </div>
+                </div>
+                <button [disabled]="billForm.invalid || updating" type="submit" class="btn btn-success btn-block btn-lg">
+                    <i *ngIf="!updating" class="fa fa-save"></i>
+                    <i *ngIf="updating" class="fa fa-refresh"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

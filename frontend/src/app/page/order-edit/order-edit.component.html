@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row">
+        <div *ngIf="(order$ | async) as order" class="col-6 offset-3">
+            <form #orderForm="ngForm" (ngSubmit)="onUpdate(orderForm, order)">                
+                <div class="form-group my-4">
+                    <label for="userId">Megrendelő azonosítója</label>
+                    <input id="userId" name="userId" [(ngModel)]="order.userId" type="number"
+                        class="form-control" pattern="[1-9]\d{0,9}" required>
+                    <div [hidden]="orderForm.controls.userId?.valid" class="error-message">
+                        Az azonosító minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="foodId">Étel azonosítója</label>
+                    <input id="foodId" name="foodId" [(ngModel)]="order.foodId" type="number"
+                        class="form-control" pattern="[1-9]\d{0,9}" required>
+                    <div [hidden]="orderForm.controls.foodId?.valid" class="error-message">
+                        Az azonosító minimum 1 és maximum 10 számjegyből állhat!
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="amount">Amount</label>
+                    <input id="amount" name="amount" [(ngModel)]="order.amount" type="number"
+                        class="form-control" pattern="[1-9]\d{0,9}" required>
+                    <div [hidden]="orderForm.controls.amount?.valid" class="error-message">
+                        Az összeg minimum 1 és maximum 10 számjegyből állhat!
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="status">Status</label>
+                    <select id="status" name="status" [(ngModel)]="order.status" class="form-control"
+                        required>
+                        <option *ngFor="let status of statuses" [value]="status">{{status}}</option>
+                    </select>
+                    <div [hidden]="orderForm.controls.status?.valid" class="error-message">
+                        A status csak a megadott értékeket veheti fel
+                    </div>
+                </div>
+                <button [disabled]="orderForm.invalid || updating" type="submit"
+                    class="btn btn-success btn-block btn-lg">
+                    <i *ngIf="!updating" class="fa fa-save"></i>
+                    <i *ngIf="updating" class="fa fa-refresh"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

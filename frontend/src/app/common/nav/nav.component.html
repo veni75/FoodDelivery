@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-success">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">          
+      <ul class="navbar-nav me-auto mb-lg-0">        
+        <li *ngFor="let nav of navigation" class="nav-item" routerLinkActive="active">
+          <a class="nav-link text-white fw-bold px-3" [routerLink]="nav.href">{{ nav.label }}</a>
+        </li>              
+        <ul class="navbar-nav mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white fw-bold px-3" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Étlapok
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+              <li><a class="dropdown-item" routerLink="foods/diet/normal">Hagyományos ételek</a></li>
+              <li><a class="dropdown-item" routerLink="foods/diet/vegetarianus">Vegetarianus ételek</a></li>
+              <li><a class="dropdown-item" routerLink="foods/diet/vegan">Vegán ételek</a></li>
+              <li><a class="dropdown-item" routerLink="foods/diet/nyersvegan">Nyers vegán ételek</a></li>
+              <li><a class="dropdown-item" routerLink="foods/diet/mentes">Mentes ételek</a></li>
+              <li><a class="dropdown-item" routerLink="foods/diet/lowcarb">Alacsony szénhidráttartalmú ételek</a></li>
+            </ul>
+          </li>
+        </ul>
+      </ul>
+      <ul class="my-2 my-lg-0 right-buttons">
+        <li *ngIf="user" class="mr-1">
+          <span class="me-3 text-white">Szia {{ user?.firstName }}!</span>
+        </li>
+        <li *ngIf="!user">
+          <a routerLink="/login" class="btn btn-success">
+            <i class="fa fa-sign-in"></i>
+          </a>
+        </li>
+        <li *ngIf="user">
+          <button (click)="onLogout()" class="btn btn-success">
+            <i class="fa fa-sign-out"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

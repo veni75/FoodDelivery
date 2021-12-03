@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="row">
+        <div *ngIf="(food$ | async) as food" class="col-6 offset-3">
+            <form #foodForm="ngForm" (ngSubmit)="onUpdate(foodForm, food)">
+                <div class="form-group my-4">
+                    <label for="name">Étel neve</label>
+                    <input required id="name" name="name" [(ngModel)]="food.foodName" type="text" class="form-control"
+                        pattern="^[a-űA-Ű .,-]{5,}$">
+                    <div [hidden]="foodForm.controls.foodName?.valid" class="error-message">
+                        A név minimum 5 karakterből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="price">Ára</label>
+                    <input required id="price" name="price" [(ngModel)]="food.price" type="number" class="form-control"
+                        pattern="^[1-9]\d{0,9}$">
+                    <div [hidden]="foodForm.controls.price?.valid" class="error-message">
+                        Az ár minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="category">Kategória</label>
+
+                    <select id="category" name="category" [(ngModel)]="food.category" class="form-control" required>
+                        <option *ngFor="let category of categories" [value]="category">{{category}}</option>
+                    </select>
+                    <div [hidden]="foodForm.controls.category?.valid" class="error-message">
+                        A kategória csak a megadott értékeket veheti fel.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="ingredients">Összetevők</label>
+                    <input required id="ingredients" name="ingredients" [(ngModel)]="food.ingredients" type="text"
+                        class="form-control" pattern="^[a-űA-Ű .,]{10,}$">
+                    <div [hidden]="foodForm.controls.ingredients?.valid" class="error-message">
+                        A leírás minimum 10 karakterből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="active">Active</label>
+                    <select required id="active" name="active" [(ngModel)]="food.active" class="form-control">
+                        <option value="true">Igen</option>
+                        <option value="false">Nem</option>
+                    </select>
+                    <div [hidden]="foodForm.controls.active?.valid" class="error-message">
+                        Az active csak a megadott értékeket veheti fel.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="image">Kép feltöltése</label>                    
+                    <input required id="image" name="image" [(ngModel)]="food.image" type="text"
+                        class="form-control" pattern="^[a-zA-Z0-9/.]{5,}$">
+                    <div [hidden]="foodForm.controls.image?.valid" class="error-message">
+                        A kép elérési útvonalának leírása minimum 5 karakterből állhat.
+                    </div>
+                </div>
+
+                <button [disabled]="foodForm.invalid || updating" type="submit"
+                    class="btn btn-success btn-block btn-lg">
+                    <i *ngIf="!updating" class="fa fa-save"></i>
+                    <i *ngIf="updating" class="fa fa-refresh"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="row">
+        <h2 class="text-success my-5">Kapcsolat</h2>
+        <div class="col-lg-6">
+            <p class="text-danger fw-bold">Szállítási területek: Fejér megye</p>
+            <p>Megrendelésed eljuttathatod hozzánk weboldalunkon, e-mailen vagy telefonon keresztül.</p>
+            <p>Ügyfélszolgálatunk rendelkezésedre áll: 8-20 óráig</p>
+            <p><span class="fw-bold">A cég neve:</span> Fincsi falatok Kft.</p>
+            <p><span class="fw-bold">Cím:</span> 8000 Székesfehérvár, Széchenyi u. 35.</p>
+            <p><span class="fw-bold">Telefonszám:</span> 06/20/598-5278</p>
+            <p><span class="fw-bold">e-mail:</span> fincsifalatok@gmail.com</p>
+            <p>Ha üzenetet szeretnél küldeni:</p>
+            
+                <form #messageForm="ngForm" (ngSubmit)="onSave(messageForm)">
+                    <div class="col-lg-8 mb-3">
+                        <label for="email" class="form-label">Email címed</label>
+                        <input type="email" class="form-control" [(ngModel)]="message.email" id="email" name="email"
+                            placeholder="neved@gmail.com" pattern="^[a-űA-Ű0-9.-]{2,}@\w{2,}.\w{2,}$" required>
+                        <div [hidden]="messageForm.controls.email?.valid" class="error-message">
+                            Az email az alábbi formátumú lehet: nev@pelda.vegzodes.
+                        </div>
+                    </div>
+                    <div class="col-lg-8 mb-3">
+                        <label for="message" class="form-label">Ide írhatod az üzeneted</label>
+                        <textarea class="form-control" id="message" name="message" rows="3"
+                            [(ngModel)]="message.message" pattern="^.{5,100}$" required></textarea>
+                        <div [hidden]="messageForm.controls.message?.valid" class="error-message">
+                            Az üzenet minimum 5 és maximum 100 karakterből állhat!
+                        </div>
+                    </div>
+                    <button [disabled]="messageForm.invalid" type="submit"
+                        class="btn btn-success btn-block btn-lg">Küldés
+                        <i class="fa fa-save"></i>
+                        
+                    </button>
+                </form> 
+                <div *ngIf="success" class="row">
+                    <div class="col-12 col-md-8 offset-md-2">
+                        <div class="alert alert-lg alert-success mt-5">
+                            Az üzenetet sikeresen elküldted.
+                        </div>
+                    </div>
+                </div>           
+        </div>
+
+        <div class="col-lg-6">
+            <div class="my-5">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2711.7355430697435!2d18.413183415615844!3d47.18261417915881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4769f7a76ac4af9b%3A0xde7a478c771445b4!2zU3rDqWtlc2ZlaMOpcnbDoXIsIFN6w6ljaGVueWkgdS4gMzUsIDgwMDA!5e0!3m2!1shu!2shu!4v1624722661230!5m2!1shu!2shu"
+                    style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+</div>

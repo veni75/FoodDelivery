@@ -1,0 +1,67 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-lg-5 my-5">
+            <button class="btn btn-success btn-block" [routerLink]="[0]">
+                <i class="fa fa-edit"></i>
+                Új rendelés hozzáadása
+            </button>
+        </div>
+        <div class="col-12 col-lg-3 my-5">
+            <select [(ngModel)]="filterKey" class="form-control border-success">
+                <option *ngFor="let key of filterKeys" [value]="key">
+                    {{ key }}
+                </option>
+            </select>
+        </div>
+        <div class="col-12 col-lg-4 my-5">
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2 border-success" type="text" placeholder="Keresés"
+                    (keyup)="onChangePhrase($event)">
+                
+            </form>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header card-header-primary">
+            <h4 class="card-title py-3 text-success">Rendelések</h4>
+            
+        </div>
+        <div class="card-body text-center">
+            <div class="table-responsive" id="target">
+                <table class="table">
+                    <thead class="text-success">
+                        <tr>
+                            <th  *ngFor="let col of cols" (click)="onColumnSelect(col.key)">{{col.label}}</th>
+                            
+                            <th>Szerkesztés</th>
+                            <th><i *ngIf="!direction" class="fa fa-arrow-up"></i>
+                                <i *ngIf="direction" class="fa fa-arrow-down"></i>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr
+                        *ngFor="let order of orderList$ | async | filter:phrase:filterKey  | sorter:columnKey:direction">
+                        <td *ngFor="let col of cols">{{order[col.key]}}</td>
+                            
+                            <td>
+                                <div class="btn-group">
+                                    <button [routerLink]="[order._id]" class="btn btn-success">
+                                        <i class="fa fa-pencil"></i>
+                                    </button>
+                                    <button (click)="onDelete(order)" class="btn btn-danger">                                                    
+                                        <i class="fa fa-trash"></i>
+                                        
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>

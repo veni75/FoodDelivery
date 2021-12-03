@@ -1,0 +1,14 @@
+
+    { "_id": 1, "userId": 1, "foodsId": 11, "amount": 768, "status": "új","time":"2021-07-12" },
+    { "_id": 2, "userId": 14, "foodsId": 3, "amount": 734, "status": "teljesítve","time":"2021-07-13" },
+    { "_id": 3, "userId": 19, "foodsId": 9, "amount": 626, "status": "új","time":"2021-07-10" },
+    { "_id": 4, "userId": 16, "foodsId": 1, "amount": 567, "status": "teljesítve","time":"2021-07-08/" },
+    { "_id": 5, "userId": 1, "foodsId": 3, "amount": 639, "status": "új" ,"time":"2021-07-12"},
+    { "_id": 6, "userId": 19, "foodsId": 6, "amount": 575, "status": "új" ,"time":"2021-07-10"},
+    { "_id": 7, "userId": 9, "foodsId": 12, "amount": 972, "status": "teljesítve" ,"time":"2021-07-25"},
+    { "_id": 8, "userId": 19, "foodsId": 14, "amount": 612, "status": "új" ,"time":"2021-07-22"},
+    { "_id": 9, "userId": 5, "foodsId": 7, "amount": 527, "status": "teljesítve","time":"2021-07-12" },
+    { "_id": 10, "userId": 12, "foodsId": 11, "amount": 715, "status": "teljesítve" ,"time":"2021-07-14"}
+  
+
+  

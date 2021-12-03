@@ -1,0 +1,123 @@
+
+  
+    {
+      "_id": 1,
+      "firstName": "Endre",
+      "lastName": "Varga",
+      "email": "varga.endre@gmail.com",      
+      "phone": "06402445342",
+      "zip": 5162,
+      "city": "Csór",
+      "password": "test",
+      "role": 1,
+      "token": ""
+    },
+    {
+      "_id": 2,
+      "firstName": "Ede",
+      "lastName": "Kiss",
+      "email": "kiss.ede@gmail.com",      
+      "phone": "06405126632",
+      "zip": 8600,
+      "city": "Mór",
+      "password": "test",
+      "role": 2,
+      "token": ""
+    },
+    {
+      "_id": 3,
+      "firstName": "Lajos",
+      "lastName": "Simon",
+      "email": "simon.lajos@gmail.com",      
+      "phone": "06402416563",
+      "zip": 5833,
+      "city": "Pákozd",
+      "password": "test",
+      "role": 3,
+      "token": ""
+    },
+    {
+      "_id": 4,
+      "firstName": "Ilona",
+      "lastName": "Varga",
+      "email": "varga.ilona@gmail.com",      
+      "phone": "06203442655",
+      "zip": 1282,
+      "city": "Gárdony",
+      "password": "test",
+      "role": 1,
+      "token": ""
+    },
+    {
+      "_id": 5,
+      "firstName": "Kinga",
+      "lastName": "Papp",
+      "email": "papp.kinga@gmail.com",      
+      "phone": "06206613624",
+      "zip": 8562,
+      "city": "Adony",
+      "password": "test",
+      "role": 2,
+      "token": ""
+    },
+    {
+      "_id": 6,
+      "firstName": "Egon",
+      "lastName": "Papp",
+      "email": "papp.egon@gmail.com",      
+      "phone": "06106625551",
+      "zip": 6401,
+      "city": "Pákozd",
+      "password": "test",
+      "role": 3,
+      "token": ""
+    },
+    {
+      "_id": 7,
+      "firstName": "Mária",
+      "lastName": "Molnár",
+      "email": "molnar.maria@gmail.com",      
+      "phone": "06405153565",
+      "zip": 8874,
+      "city": "Bicske",
+      "password": "test",
+      "role": 1,
+      "token": ""
+    },
+    {
+      "_id": 8,
+      "firstName": "Béla",
+      "lastName": "Papp",
+      "email": "papp.bela@gmail.com",      
+      "phone": "06506314415",
+      "zip": 3898,
+      "city": "Bicske",
+      "password": "test",
+      "role": 2,
+      "token": ""
+    },
+    {
+      "_id": 9,
+      "firstName": "Zsuzsa",
+      "lastName": "Varga",
+      "email": "varga.zsuzsa@gmail.com",      
+      "phone": "06405122436",
+      "zip": 7409,
+      "city": "Bicske",
+      "password": "test",
+      "role": 3,
+      "token": ""
+    },
+    {
+      "_id": 10,
+      "firstName": "Mária",
+      "lastName": "Nagy",
+      "email": "nagy.maria@gmail.com",      
+      "phone": "06301624524",
+      "zip": 8413,
+      "city": "Dunaújváros",
+      "password": "test",
+      "role": 1,
+      "token": ""
+    }
+  

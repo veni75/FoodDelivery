@@ -1,0 +1,297 @@
+<div class="container">
+    <div class="row">
+        <div *ngIf="(nutrient$ | async) as nutrient" class="col-6 offset-3">
+            <form #nutrientForm="ngForm" (ngSubmit)="onUpdate(nutrientForm, nutrient)">   
+                <div class="form-group my-4">
+                    <label for="name">Név</label>
+                    <input name="name" [(ngModel)]="nutrient.foodName" type="text" id="name"
+                        class="form-control border-success" pattern="^[A-Ű][a-űA-Ű- ]{1,19}$" required>
+                    <div [hidden]="nutrientForm.controls.name?.valid" class="error-message">
+                        A név minimum 2 és maximum 20 karakterből állhat.
+                    </div>
+                </div>   
+                <div class="form-group my-4">
+                    <label for="foodGroup">Ételcsoport</label>
+                    <select id="foodGroup" name="foodGroup" [(ngModel)]="nutrient.foodGroup" class="form-control"
+                        required>
+                        <option *ngFor="let foodGroup of foodGroups" [value]="foodGroup">{{foodGroup}}</option>
+                    </select>
+                    <div [hidden]="nutrientForm.controls.foodGroup?.valid" class="error-message">
+                        Az ételcsoport csak a megadott értékeket veheti fel
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="vitaminA">A vitamin</label>
+                    <input id="vitaminA" name="vitaminA" [(ngModel)]="nutrient.Avitamin" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.vitaminA?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="vitaminB1">B1 vitamin</label>
+                    <input id="vitaminB1" name="vitaminB1" [(ngModel)]="nutrient.B1vitamin" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.vitaminB1?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="vitaminB2">B2 vitamin</label>
+                    <input id="vitaminB2" name="vitaminB2" [(ngModel)]="nutrient.B2vitamin" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.vitaminB2?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="vitaminB3">B3 vitamin</label>
+                    <input id="vitaminB3" name="vitaminB3" [(ngModel)]="nutrient.B3vitamin" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.vitaminB3?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="vitaminB5">B5 vitamin</label>
+                    <input id="vitaminB5" name="vitaminB5" [(ngModel)]="nutrient.B5vitamin" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.vitaminB5?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="vitaminB6">B6 vitamin</label>
+                    <input id="vitaminB6" name="vitaminB6" [(ngModel)]="nutrient.B6vitamin" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.vitaminB6?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="vitaminB12">B12 vitamin</label>
+                    <input id="vitaminB12" name="vitaminB12" [(ngModel)]="nutrient.B12vitamin" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.vitaminB12?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="vitaminC">C vitamin</label>
+                    <input id="vitaminC" name="vitaminC" [(ngModel)]="nutrient.Cvitamin" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.vitaminC?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="vitaminD">D vitamin</label>
+                    <input id="vitaminD" name="vitaminD" [(ngModel)]="nutrient.Dvitamin" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.vitaminD?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="vitaminE">E vitamin</label>
+                    <input id="vitaminE" name="vitaminE" [(ngModel)]="nutrient.Evitamin" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.vitaminE?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="vitaminK">K vitamin</label>
+                    <input id="vitaminK" name="vitaminK" [(ngModel)]="nutrient.Kvitamin" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.vitaminK?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="folat">folát</label>
+                    <input id="folat" name="folat" [(ngModel)]="nutrient.folat" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.folat?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="cink">cink</label>
+                    <input id="cink" name="cink" [(ngModel)]="nutrient.cink" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.cink?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="foszfor">foszfor</label>
+                    <input id="foszfor" name="foszfor" [(ngModel)]="nutrient.foszfor" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.foszfor?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="kalcium">kalcium</label>
+                    <input id="kalcium" name="kalcium" [(ngModel)]="nutrient.kalcium" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.kalcium?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="kalium">kálium</label>
+                    <input id="kalium" name="kalium" [(ngModel)]="nutrient.kalium" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.kalium?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="magnezium">magnézium</label>
+                    <input id="magnezium" name="magnezium" [(ngModel)]="nutrient.magnezium" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.magnezium?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="mangan">mangán</label>
+                    <input id="mangan" name="mangan" [(ngModel)]="nutrient.mangan" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.mangan?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="natrium">nátrium</label>
+                    <input id="natrium" name="natrium" [(ngModel)]="nutrient.natrium" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.natrium?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="rez">réz</label>
+                    <input id="rez" name="rez" [(ngModel)]="nutrient.rez" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.rez?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="szelen">szelén</label>
+                    <input id="szelen" name="szelen" [(ngModel)]="nutrient.szelen" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.szelen?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="vas">vas</label>
+                    <input id="vas" name="vas" [(ngModel)]="nutrient.vas" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.vas?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="szenhidrat">szénhidrát</label>
+                    <input id="szenhidrat" name="szenhidrat" [(ngModel)]="nutrient.szenhidrat" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.szenhidrat?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="rost">rost</label>
+                    <input id="rost" name="rost" [(ngModel)]="nutrient.rost" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.rost?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="kemenyito">keményítő</label>
+                    <input id="kemenyito" name="kemenyito" [(ngModel)]="nutrient.kemenyito" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.kemenyito?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="feherje">fehérje</label>
+                    <input id="feherje" name="feherje" [(ngModel)]="nutrient.feherje" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.feherje?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="cisztein">cisztein</label>
+                    <input id="cisztein" name="cisztein" [(ngModel)]="nutrient.cisztein" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.cisztein?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="fenilAlanin">fenil-alanin</label>
+                    <input id="fenilAlanin" name="fenilAlanin" [(ngModel)]="nutrient.fenilAlanin" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.fenilAlanin?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="treonin">treonin</label>
+                    <input id="treonin" name="treonin" [(ngModel)]="nutrient.treonin" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.treonin?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="triptofan">triptofan</label>
+                    <input id="triptofan" name="triptofan" [(ngModel)]="nutrient.triptofan" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.triptofan?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="tirozin">tirozin</label>
+                    <input id="tirozin" name="tirozin" [(ngModel)]="nutrient.tirozin" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.tirozin?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="valin">valin</label>
+                    <input id="valin" name="valin" [(ngModel)]="nutrient.valin" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.valin?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                <div class="form-group my-4">
+                    <label for="zsir">zsir</label>
+                    <input id="zsir" name="zsir" [(ngModel)]="nutrient.zsir" type="number" step="0.01"
+                        class="form-control" pattern="^[0-9,.]{1,10}$" required>
+                    <div [hidden]="nutrientForm.controls.zsir?.valid" class="error-message">
+                        Az érték minimum 1 és maximum 10 számjegyből állhat.
+                    </div>
+                </div>
+                
+                <button [disabled]="nutrientForm.invalid || updating" type="submit"
+                    class="btn btn-success btn-block btn-lg">
+                    <i *ngIf="!updating" class="fa fa-save"></i>
+                    <i *ngIf="updating" class="fa fa-refresh"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
