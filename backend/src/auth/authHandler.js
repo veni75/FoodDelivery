@@ -7,11 +7,20 @@ const refreshTokens = [];
 module.exports.login = async(req, res) => {
     const { email, password } = req.body;
     const users = await Users.find({});
-    const user = users.find(
+    /* const user = users.find(
         u => u.email === email && u.password === password
-    );
+    ); */
 
-    if (user) {
+    try {
+        const user = await Users.findOne({email});
+        if(!user){
+            throw new Error('User not found');
+        }
+
+        const verified = await user.verifyPassword(password);
+        if(!verified){
+            throw new Error('Incorrect credentials');
+        }
         const accessToken = jwt.sign({
             email: user.email,
             role: user.role
@@ -27,9 +36,10 @@ module.exports.login = async(req, res) => {
 
         res.json({
             accessToken,
-            refreshToken
+            refreshToken,
+            user
         });
-    } else {
+    }catch(e){
         res.send('Username or password incorrect.');
     }
 
